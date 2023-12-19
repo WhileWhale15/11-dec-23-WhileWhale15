@@ -34,10 +34,18 @@ section {
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .logo img {
@@ -46,8 +54,14 @@ section {
   filter: invert(1) grayscale(1) brightness(1.5) contrast(1.5);
 }
 
+.logo h1 {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+}
+
 .nav-bar {
-  width: 40.5%;
+  width: 45%;
 }
 
 .nav-bar ul {
@@ -82,6 +96,7 @@ section {
 
 .nav-bar ul li a:hover {
   color: white;
+  transform: translateY(-5px);
 }
 
 .nav-bar ul li.home {
@@ -90,6 +105,18 @@ section {
 
 .nav-bar ul li.home a {
   padding: 0px 30px 0px 30px;
+}
+
+.nav-bar ul li.home a:hover {
+  transform: translateY(-5px);
+}
+
+.nav-bar ul li.achievements a:hover {
+  transform: translateY(-5px);
+}
+
+.nav-bar ul li.message a:hover {
+  transform: translateY(-5px);
 }
 
 section#home {
@@ -165,10 +192,10 @@ section#profile .container {
 }
 
 .profile-wrap {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -216,14 +243,24 @@ section#message .container {
   justify-content: space-between;
   text-align: right;
   margin-right: 10px;
+  font-size: 19px;
 }
 
 .input {
   flex: 1;
 }
 
+.input input[type="text"] {
+  width: 98%;
+  height: 25px;
+  border-radius: 3px;
+  border-width: 1px !important;
+  border-style: solid !important;
+  padding-left: 7.5px;
+}
+
 .input input[type="text"][name="message"] {
-  height: 175px;
+  height: 145px;
 }
 
 .label::after {
@@ -243,9 +280,45 @@ section#message .container {
   text-align: left;
 }
 
+.message-box {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 250px;
+}
+
 button {
   width: 100%;
-  margin-top: 20px;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Inconsolata", monospace;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.05rem;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 1em 2em;
+  text-align: center;
+  transition: 0.2s;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #1a1a1a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
 
 footer {

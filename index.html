@@ -16,6 +16,7 @@
       <div class="container">
         <div class="logo">
           <img src="assets/coral-mec.png" alt="logo" />
+          <h1>MechSchool</h1>
         </div>
         <div class="nav-bar">
           <nav>
@@ -42,8 +43,8 @@
       <section id="home">
         <div class="container">
           <div class="greeting">
-            <h1>Hi, Welcome to the Website</h1>
-            <p>Ini adalah website latihan pertama</p>
+            <h1>Hi, <span id="name">name</span> Welcome to our Website</h1>
+            <p>This is where your new hobby began</p>
           </div>
         </div>
 
@@ -97,43 +98,48 @@
 
             <div class="row">
               <div class="label">
-                <label for="name">Nama</label>
+                <label for="nama">Name</label>
               </div>
               <div class="input">
-                <input type="text" name="nama" />
+                <input type="text" name="nama" placeholder="Name" />
               </div>
             </div>
 
             <div class="row">
               <div class="label">
-                <label for="birth">Tanggal Lahir</label>
+                <label for="birth">Birthday</label>
               </div>
               <div class="input">
-                <input type="text" name="birth" />
+                <input type="text" name="birth" placeholder="Birthday" />
               </div>
             </div>
 
             <div class="row">
               <div class="label">
-                <label for="gender">Jenis Kelamin</label>
+                <label for="gender">Gender</label>
               </div>
               <div class="input">
-                <input type="radio" name="gender" />Laki-Laki
-                <input type="radio" name="gender" />Perempuan
+                <input type="radio" name="gender" />Male
+                <input type="radio" name="gender" />Female
               </div>
             </div>
 
             <div class="row">
               <div class="label">
-                <label for="message">Pesan</label>
+                <label for="message">Message</label>
               </div>
               <div class="input">
-                <input type="text" name="message" />
+                <input type="text" name="message" placeholder="Message" />
               </div>
             </div>
 
             <button type="submit">Submit</button>
           </div>
+
+          <!-- <form>
+            <input required type="text" placeholder="nama anda" id="name-input">
+            <button type="submit" id="submit">Submit</button>
+          </form> -->
 
           <div class="result">
             <h1>Your Message</h1>
@@ -151,4 +157,6 @@
       </div>
     </footer>
   </body>
+
+  <script src="js/script.js"></script>
 </html>
