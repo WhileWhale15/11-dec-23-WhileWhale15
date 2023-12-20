@@ -15,6 +15,7 @@ body {
 
 header {
   max-width: 100%;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +97,6 @@ section {
 
 .nav-bar ul li a:hover {
   color: white;
-  transform: translateY(-5px);
 }
 
 .nav-bar ul li.home {
@@ -105,18 +105,6 @@ section {
 
 .nav-bar ul li.home a {
   padding: 0px 30px 0px 30px;
-}
-
-.nav-bar ul li.home a:hover {
-  transform: translateY(-5px);
-}
-
-.nav-bar ul li.achievements a:hover {
-  transform: translateY(-5px);
-}
-
-.nav-bar ul li.message a:hover {
-  transform: translateY(-5px);
 }
 
 section#home {
@@ -128,27 +116,78 @@ section#home {
 }
 
 section#home .container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: start;
   position: absolute;
   z-index: 1;
 }
 
 .greeting {
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+  position: absolute;
+  top: 5%;
+  bottom: auto;
 }
 
 .greeting h1 {
-  font-size: 30px;
+  font-size: 27px;
   margin: 5px 0px 5px 0px;
 }
 
 .greeting p {
   margin: 5px 0px 5px 0px;
+}
+
+.hero-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.hero-text h1 {
+  font-size: 45px;
+  font-weight: 900;
+  margin: 20px 0px;
+}
+
+.hero-text a {
+  width: 30%;
+  appearance: none;
+  color: #1a1a1a;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Inconsolata", monospace;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 1em 2em;
+  text-align: center;
+  transition: 0.2s;
+  touch-action: manipulation;
+  will-change: transform;
+  text-decoration: none;
+}
+
+.hero-text a:disabled {
+  pointer-events: none;
+}
+
+.hero-text a:hover {
+  color: #fff;
+  background-color: #1a1a1a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.hero-text a:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
 
 .background-img {
@@ -211,6 +250,55 @@ section#profile .container {
   filter: invert(0.15);
 }
 
+section#offers {
+  background-color: rgba(21, 21, 21, 0.1);
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+
+section#offers .container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.profile-title {
+  text-align: center;
+}
+
+.profile-title h1 {
+  font-size: 30px;
+  margin: 15px 0px 15px 0px;
+}
+
+.profile-title p {
+  font-size: 18px;
+}
+
+#slider {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon img {
+  filter: invert(0.15);
+}
+
 section#message {
   width: 100%;
   min-height: 60vh;
@@ -257,10 +345,17 @@ section#message .container {
   border-width: 1px !important;
   border-style: solid !important;
   padding-left: 7.5px;
+  font-family: "Inconsolata", monospace;
 }
 
-.input input[type="text"][name="message"] {
+.input textarea[type="text"][name="message"] {
   height: 145px;
+  width: 98%;
+  border-radius: 3px;
+  border-width: 1px !important;
+  border-style: solid !important;
+  padding-top: 7.5px;
+  padding-left: 7.5px;
 }
 
 .label::after {
@@ -287,7 +382,7 @@ section#message .container {
 }
 
 button {
-  width: 100%;
+  width: 80%;
   appearance: none;
   background-color: transparent;
   cursor: pointer;
@@ -298,6 +393,7 @@ button {
   letter-spacing: 0.05rem;
   border: 1px solid;
   border-radius: 5px;
+  margin-left: 125px;
   padding: 1em 2em;
   text-align: center;
   transition: 0.2s;
@@ -336,7 +432,7 @@ footer .container {
 
 footer .container p {
   line-height: 3.5em;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: -0.025rem;
 }
