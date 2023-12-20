@@ -22,3 +22,10 @@ function changeImage() {
 }
 
 setInterval(changeImage, 2000);
+
+function toggleNav() {
+  var menuToggle = document.querySelector(".toggle");
+  var navigation = document.querySelector(".nav-bar");
+  menuToggle.classList.toggle("active");
+  navigation.classList.toggle("active");
+}
