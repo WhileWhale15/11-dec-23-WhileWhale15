@@ -309,7 +309,7 @@ section#showcase .container {
   align-items: center;
   text-align: center;
   gap: 15px;
-  padding: 0px 100px;
+  padding: 0px 125px;
   border-right: 1px solid black;
 }
 
@@ -381,6 +381,16 @@ section#message .container {
   flex: 1;
 }
 
+.input input[type="date"] {
+  width: 98.5%;
+  height: 25px;
+  border-radius: 3px;
+  border-width: 1px !important;
+  border-style: solid !important;
+  padding-left: 7.5px;
+  font-family: "Inconsolata", monospace;
+}
+
 .input input[type="text"] {
   width: 98%;
   height: 25px;
@@ -420,11 +430,17 @@ section#message .container {
 
 .message-box {
   border: 1px solid black;
+  padding: 0px 15px;
   border-radius: 5px;
   height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
 }
 
-button {
+#submit {
   width: 80%;
   appearance: none;
   background-color: transparent;
@@ -444,18 +460,18 @@ button {
   will-change: transform;
 }
 
-button:disabled {
+#submit:disabled {
   pointer-events: none;
 }
 
-button:hover {
+#submit:hover {
   color: #fff;
   background-color: #1a1a1a;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
 
-button:active {
+#submit:active {
   box-shadow: none;
   transform: translateY(0);
 }
@@ -735,7 +751,7 @@ footer .container img {
     height: 150px;
   }
 
-  button {
+  #submit {
     width: 100%;
     margin-left: 5px;
   }

@@ -1,19 +1,48 @@
 function replaceName() {
-  let name = prompt("Hi, can you write your name here?", "");
-  document.getElementById("name").innerHTML = name;
+  let storedName = localStorage.getItem("userName");
+
+  if (!storedName) {
+    storedName = prompt("Hi, can you write your name here?", "");
+    localStorage.setItem("userName", storedName);
+  }
+  document.getElementById("name").innerHTML = storedName;
 }
 
-replaceName();
+function replaceName() {
+  let storedName = localStorage.getItem("userName");
 
-document.getElementById("submit").addEventListener("click", function () {
-  const nama = nameInput.value;
-  document.getElementById("name").innerHTML = nama;
-});
+  if (!storedName) {
+    storedName = prompt("Hi, can you write your name here?", "");
+    localStorage.setItem("userName", storedName);
+  }
+  document.getElementById("name").innerHTML = storedName;
+}
+
+function resetName() {
+  localStorage.removeItem("userName");
+  replaceName();
+}
+
+window.onload = replaceName;
+
+// Submitting Form
+function submitForm() {
+  const form = document.getElementById("messageForm");
+  const formData = new FormData(form);
+  const messageBox = document.getElementById("messageBox");
+
+  let resultHTML = "";
+  formData.forEach((value, key) => {
+    resultHTML += `<p><strong>${key}:</strong> ${value}</p>`;
+  });
+
+  messageBox.innerHTML = resultHTML;
+}
 
 // Slider
 let currentIndex = 0;
-const images = document.querySelectorAll(".slider-content");
-const totalImages = images.length(3);
+const images = document.querySelectorAll(".slider-banner");
+const totalImages = images.length;
 
 function changeImage() {
   images[currentIndex].style.display = "none";
