@@ -214,11 +214,12 @@ section#profile {
 section#profile .container {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 50px;
 }
 
 .profile-title {
-  text-align: center;
+  text-align: left;
 }
 
 .profile-title h1 {
@@ -250,32 +251,32 @@ section#profile .container {
   filter: invert(0.15);
 }
 
-section#offers {
+section#showcase {
   background-color: rgba(21, 21, 21, 0.1);
   width: 100%;
-  min-height: 50vh;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid;
 }
 
-section#offers .container {
+section#showcase .container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 60px;
 }
 
-.profile-title {
+.showcase-title {
   text-align: center;
 }
 
-.profile-title h1 {
+.showcase-title h1 {
   font-size: 30px;
   margin: 15px 0px 15px 0px;
 }
 
-.profile-title p {
+.showcase-title p {
   font-size: 18px;
 }
 
@@ -283,7 +284,7 @@ section#offers .container {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -292,11 +293,39 @@ section#offers .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 15px;
+  padding: 0px 100px;
+  border-right: 1px solid black;
 }
 
-.icon img {
-  filter: invert(0.15);
+#kailh.slider-content {
+  border-right: 0;
+}
+
+.content h2 {
+  margin: 5px 0px;
+}
+
+.thumb {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.thumb li {
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.thumb li:hover {
+  transform: translateY(-15px);
+}
+
+.thumb li img {
+  max-width: 60px;
 }
 
 section#message {
