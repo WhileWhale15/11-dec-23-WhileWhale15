@@ -223,7 +223,7 @@ section#profile .container {
 }
 
 .profile-title h1 {
-  font-size: 30px;
+  font-size: 35px;
   margin: 15px 0px 15px 0px;
 }
 
@@ -247,8 +247,22 @@ section#profile .container {
   gap: 15px;
 }
 
-.icon img {
-  filter: invert(0.15);
+.text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10%;
+}
+
+.text .left,
+.text .right {
+  width: 45%;
+}
+
+.text .left h2,
+.text .right h2 {
+  margin-bottom: 10px;
 }
 
 section#showcase {
@@ -272,7 +286,7 @@ section#showcase .container {
 }
 
 .showcase-title h1 {
-  font-size: 30px;
+  font-size: 35px;
   margin: 15px 0px 15px 0px;
 }
 
@@ -587,6 +601,95 @@ footer .container img {
     object-fit: cover;
     position: relative;
     min-height: 90vh;
+  }
+
+  section#profile {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid;
+  }
+
+  section#profile .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    margin: 20px 0px;
+  }
+
+  .profile-title {
+    text-align: left;
+  }
+
+  .profile-title h1 {
+    font-size: 35px;
+    margin: 5px 0px;
+  }
+
+  .profile-title p {
+    font-size: 18px;
+  }
+
+  .profile-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .text .left,
+  .text .right {
+    width: 100%;
+  }
+
+  .text .right {
+    margin-bottom: 10px;
+  }
+
+  section#showcase {
+    border-bottom: 1px solid;
+  }
+
+  section#showcase .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #slider {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 100px;
+    border-bottom: 1px solid black;
+  }
+
+  #kailh.slider-content {
+    border-bottom: 0;
   }
 
   section#message {
