@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>mechs | Find your new passion here</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="assets/coral-mec.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -16,7 +17,7 @@
       <div class="container">
         <div class="logo">
           <img src="assets/coral-mec.png" alt="logo" />
-          <h1>mechschool</h1>
+          <h1>mechs</h1>
         </div>
         <div class="toggle" onclick="toggleNav();"></div>
         <div class="nav-bar">
@@ -28,8 +29,8 @@
               <li class="profile">
                 <a href="#profile">Our Profile</a>
               </li>
-              <li class="offers">
-                <a href="#offers">Offers</a>
+              <li class="showcase">
+                <a href="#showcase">Showcase</a>
               </li>
               <li class="message">
                 <a href="#message">Message Us</a>
@@ -67,68 +68,154 @@
               Necessitatibus quam volupt
             </p>
           </div>
-          <div class="profile-wrap">
-            <div class="profile">
-              <div class="icon">
-                <img src="assets/icon1.png" alt="" width="150px" />
-              </div>
-              <div class="info">
-                <h2>John Doe</h2>
-              </div>
-            </div>
-            <div class="profile">
-              <div class="icon">
-                <img src="assets/icon1.png" alt="" width="150px" />
-              </div>
-              <div class="info">
-                <h2>John Doe</h2>
-              </div>
-            </div>
-            <div class="profile">
-              <div class="icon">
-                <img src="assets/icon1.png" alt="" width="150px" />
-              </div>
-              <div class="info">
-                <h2>John Doe</h2>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
-      <section id="offers">
+      <section id="showcase">
         <div class="container">
-          <div class="profile-title">
-            <h1>Offers</h1>
+          <div class="showcase-title">
+            <h1>An Entry to Standard Mechanical Switches</h1>
             <p>
-              We offer lots of benefit that you could get from our mini courses
+              Unveiling the Unique Characteristics of Cherry MX, Kailh, and
+              Gateron Switches
             </p>
           </div>
 
           <div id="slider">
-            <div class="slider-content">
-              <img src="assets/icon1.png" alt="" width="150px" />
-              <h2>John Doe</h2>
+            <!-- Cherry MX -->
+            <div id="cherry" class="slider-content">
+              <div class="content">
+                <img
+                  src="assets/Cherry_Blue.png"
+                  class="switch"
+                  alt="Cherry MX Blue"
+                  width="200px"
+                />
+                <h2 id="displayName">Cherry MX Blue</h2>
+                <p id="displayText">Clicky</p>
+              </div>
+
+              <ul class="thumb">
+                <li>
+                  <img
+                    alt="thumbnail1"
+                    id="img1"
+                    width="50px"
+                    src="assets/Cherry_Red.png"
+                    onclick="set1();"
+                  />
+                </li>
+                <li>
+                  <img
+                    alt="thumbnail2"
+                    id="img2"
+                    width="50px"
+                    src="assets/Cherry_Blue.png"
+                    onclick="imgSlider('assets/Cherry_Blue.png', '.switch'); changeCategory('Cherry MX Blue', 'displayName'); changeText('Clicky', 'displayText');"
+                  />
+                </li>
+                <li>
+                  <img
+                    alt="thumbnail3"
+                    id="img3"
+                    width="50px"
+                    src="assets/Cherry_Brown.png"
+                    onclick="imgSlider('assets/Cherry_Brown.png', '.switch'); changeCategory('Cherry MX Brown', 'displayName'); changeText('Tactile', 'displayText');"
+                  />
+                </li>
+              </ul>
             </div>
-            <div class="slider-content">
-              <img src="assets/icon1.png" alt="" width="150px" />
-              <h2>John Doe</h2>
+
+            <!-- Gateron -->
+            <div id="gateron" class="slider-content">
+              <div class="content">
+                <img
+                  src="assets/Gateron_Blue.png"
+                  class="switch1"
+                  alt="Cherry MX Blue"
+                  width="200px"
+                  height="200px"
+                />
+                <h2 id="displayName1">Gateron Red</h2>
+                <p id="displayText1">Clicky</p>
+              </div>
+
+              <ul class="thumb">
+                <li>
+                  <img
+                    alt="thumbnail4"
+                    id="img4"
+                    width="50px"
+                    height="50px"
+                    src="assets/Gateron_Red.png"
+                    onclick="set2();"
+                  />
+                </li>
+                <li>
+                  <img
+                    alt="thumbnail5"
+                    id="img5"
+                    width="50px"
+                    height="50px"
+                    src="assets/Gateron_Blue.png"
+                    onclick="imgSlider('assets/Gateron_Blue.png', '.switch1'); changeCategory('Gateron Blue', 'displayName1'); changeText('Clicky', 'displayText1');"
+                  />
+                </li>
+                <li>
+                  <img
+                    alt="thumbnail6"
+                    id="img6"
+                    width="50px"
+                    height="50px"
+                    src="assets/Gateron_Brown.png"
+                    onclick="imgSlider('assets/Gateron_Brown.png', '.switch1'); changeCategory('Gateron Brown', 'displayName1'); changeText('Tactile', 'displayText1');"
+                  />
+                </li>
+              </ul>
             </div>
-            <div class="slider-content">
-              <img src="assets/icon1.png" alt="" width="150px" />
-              <h2>John Doe</h2>
-            </div>
-            <div class="slider-content">
-              <img src="assets/icon1.png" alt="" width="150px" />
-              <h2>John Doe</h2>
-            </div>
-            <div class="slider-content">
-              <img src="assets/icon1.png" alt="" width="150px" />
-              <h2>John Doe</h2>
-            </div>
-            <div class="slider-content">
-              <img src="assets/icon1.png" alt="" width="150px" />
-              <h2>John Doe</h2>
+
+            <!-- Kaihl Box -->
+            <div id="kailh" class="slider-content">
+              <div class="content">
+                <img
+                  src="assets/Kailh_BOX_Red.png"
+                  class="switch2"
+                  alt="Kaihl Box Red"
+                  width="200px"
+                />
+                <h2 id="displayName2">Kailh BOX Red</h2>
+                <p id="displayText2">Linear</p>
+              </div>
+
+              <ul class="thumb">
+                <li>
+                  <img
+                    alt="thumbnail7"
+                    id="img7"
+                    width="50px"
+                    src="assets/Kailh_BOX_Red.png"
+                    onclick="set3();"
+                  />
+                </li>
+                <li>
+                  <img
+                    alt="thumbnail8"
+                    id="img8"
+                    width="50px"
+                    src="assets/Kailh_BOX_White.png"
+                    onclick="imgSlider('assets/Kailh_BOX_White.png', '.switch2'); changeCategory('Kailh BOX White', 'displayName2'); changeText('Clicky', 'displayText2');"
+                  />
+                </li>
+                <li>
+                  <img
+                    alt="thumbnail9"
+                    id="img8"
+                    width="50px"
+                    src="assets/Kailh_BOX_Brown.png"
+                    onclick="imgSlider('assets/Kailh_BOX_Brown.png', '.switch2'); changeCategory('Kailh BOX Brown', 'displayName2'); changeText('Tactile', 'displayText2');"
+                  />
+                </li>
+              </ul>
             </div>
           </div>
         </div>
