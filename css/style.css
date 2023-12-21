@@ -194,9 +194,15 @@ section#home .container {
   position: absolute;
   z-index: 0;
   width: 100%;
+  overflow: hidden;
 }
 
-.background-img img {
+.banner-slide {
+  display: none;
+  width: 100%;
+}
+
+.banner-slide img {
   width: 100%;
   max-height: 100vh;
   filter: invert(1) grayscale(1) brightness(1.1);
@@ -521,17 +527,17 @@ footer .container img {
     width: 30px;
     height: 25px;
     cursor: pointer;
-    background: url(assets/menu.png);
+    background: url(../assets/menu.png);
     background-size: 25px;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 20;
   }
 
-  .toggle .active {
+  .toggle.active {
     position: fixed;
     right: 40px;
-    background: url(assets/close.png);
+    background: url(../assets/close.png);
     filter: invert(1);
     background-size: 25px;
     background-position: center;
@@ -612,7 +618,7 @@ footer .container img {
     font-size: 12px;
   }
 
-  .background-img img {
+  .background-img .banner-slide img {
     opacity: 50%;
     object-fit: cover;
     position: relative;
@@ -702,6 +708,7 @@ footer .container img {
     flex-direction: column;
     padding: 30px 100px;
     border-bottom: 1px solid black;
+    border-right: 0;
   }
 
   #kailh.slider-content {

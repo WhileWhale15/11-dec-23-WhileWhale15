@@ -1,3 +1,4 @@
+// Replace User Name
 function replaceName() {
   let storedName = localStorage.getItem("userName");
 
@@ -40,17 +41,27 @@ function submitForm() {
 }
 
 // Slider
-let currentIndex = 0;
-const images = document.querySelectorAll(".slider-banner");
-const totalImages = images.length;
+document.addEventListener("DOMContentLoaded", function () {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".banner-slide");
 
-function changeImage() {
-  images[currentIndex].style.display = "none";
-  currentIndex = (currentIndex + 1) % totalImages;
-  images[currentIndex].style.display = "block";
-}
+  function showSlide(index) {
+    slides.forEach((slide) => {
+      slide.style.display = "none";
+    });
 
-setInterval(changeImage, 2000);
+    slides[index].style.display = "block";
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, 2500);
+
+  showSlide(currentSlide);
+});
 
 // Navbar
 function toggleNav() {
