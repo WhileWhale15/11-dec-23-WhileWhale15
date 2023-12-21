@@ -40,6 +40,17 @@ function submitForm() {
   messageBox.innerHTML = resultHTML;
 }
 
+// Validate Form
+function submitForm() {
+  var form = document.getElementById("messageForm");
+
+  if (form.checkValidity()) {
+    alert("Form submitted!");
+  } else {
+    alert("Please fill out all required fields.");
+  }
+}
+
 // Slider
 document.addEventListener("DOMContentLoaded", function () {
   let currentSlide = 0;
